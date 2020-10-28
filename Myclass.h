@@ -31,6 +31,14 @@ JNIEXPORT jboolean JNICALL Java_Myclass_isPalindrome
 JNIEXPORT void JNICALL Java_Myclass_accessDetails
   (JNIEnv *, jobject);
 
+/*
+ * Class:     Myclass
+ * Method:    modifyDetails
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_Myclass_modifyDetails
+  (JNIEnv *, jobject);
+
 #ifdef __cplusplus
 }
 #endif

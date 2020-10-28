@@ -67,5 +67,10 @@ public class Myclass {
 
         m.accessDetails();
 
+        //Question 5
+
+        m.modifyDetails();
+        m.accessDetails();
+
      }
 }
