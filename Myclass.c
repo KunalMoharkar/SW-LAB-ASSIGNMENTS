@@ -9,6 +9,7 @@ JNIEXPORT void JNICALL Java_Myclass_sayHello(JNIEnv *env, jobject thisObj)
    return;
 }
 
+//question 1 check palindrome function
 JNIEXPORT jboolean JNICALL Java_Myclass_isPalindrome(JNIEnv *env,  jobject obj, jstring prompt)
 {
     int i,j;
@@ -35,4 +36,31 @@ JNIEXPORT jboolean JNICALL Java_Myclass_isPalindrome(JNIEnv *env,  jobject obj, 
     }
 
     return 1;  //palindrome 
+}
+
+//question 4 -- calling static and member methods
+JNIEXPORT void JNICALL Java_Myclass_accessDetails(JNIEnv *env, jobject obj)
+{   
+   //get the class
+   jclass thisClass = (*env)->GetObjectClass(env, obj);
+ 
+   // Get the Method ID for method "accessDetails", which takes no arg and return void
+   jmethodID printDetails = (*env)->GetMethodID(env, thisClass, "printDetails", "()V");
+
+   if (printDetails == NULL) //handle errors
+   {
+      return;
+   }
+   //call method
+   (*env)->CallVoidMethod(env, obj,  printDetails);
+
+   //get id of static method "printDetails" that takes no arg and return void
+   jmethodID printAddress = (*env)->GetStaticMethodID(env, thisClass,"printAddress", "()V");
+
+   if (NULL == printAddress) 
+   {    
+     return;
+   }
+   //call static method
+   (*env)->CallStaticObjectMethod(env, thisClass, printAddress);
 }
