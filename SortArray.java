@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SortArray {  // Save as HelloJNI.java
+public class SortArray {  
    static {
       System.loadLibrary("sortarray"); // Load native library sortarray.dll (Windows) or libsortarray.so (Unixes)
                                    //  at runtime
