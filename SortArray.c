@@ -1,4 +1,4 @@
-// Save as "HelloJNI.c"
+
 //#include <jni.h>        // JNI header provided by JDK
 #include <stdio.h>      // C Standard IO Header
 #include<stdlib.h>
