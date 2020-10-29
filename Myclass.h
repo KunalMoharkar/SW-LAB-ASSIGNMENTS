@@ -15,6 +15,30 @@ extern "C" {
 JNIEXPORT void JNICALL Java_Myclass_sayHello
   (JNIEnv *, jobject);
 
+/*
+ * Class:     Myclass
+ * Method:    isPalindrome
+ * Signature: (Ljava/lang/String;)Z
+ */
+JNIEXPORT jboolean JNICALL Java_Myclass_isPalindrome
+  (JNIEnv *, jobject, jstring);
+
+/*
+ * Class:     Myclass
+ * Method:    accessDetails
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_Myclass_accessDetails
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     Myclass
+ * Method:    modifyDetails
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_Myclass_modifyDetails
+  (JNIEnv *, jobject);
+
 #ifdef __cplusplus
 }
 #endif
