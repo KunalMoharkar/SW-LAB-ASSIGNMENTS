@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class SortArray {  
    static {
-      System.loadLibrary("sortarray"); // Load native library sortarray.dll (Windows) or libsortarray.so (Unixes)
+      System.loadLibrary("hello"); // Load native library sortarray.dll (Windows) or libsortarray.so (Unixes)
                                    //  at runtime
                                    // This library contains a native method called sortArray()
    }
