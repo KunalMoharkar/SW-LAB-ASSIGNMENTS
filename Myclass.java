@@ -38,38 +38,24 @@ public class Myclass {
     }
 
      // Declare an instance native method 
-     private native void sayHello();
-     private native boolean isPalindrome(String str);
      private native void accessDetails();
      private native void modifyDetails();
      public static void main(String[] args) {
 
         Myclass m = new Myclass("Kunal","VNIT","CSE");
-        m.sayHello();  // Create an instance and invoke the native method
-
-        //Question 1
     
-        Scanner sc = new Scanner(System.in);  
-        System.out.print("Enter String: ");  
-        String str= sc.nextLine();  
-        sc.close();
-
-        if(m.isPalindrome(str))
-        {
-            System.out.println("Yes it is a Palindrome");
-        }
-        else
-        {
-            System.out.println("Not a Palindrome");
-        }
-
+    
         //Question 4
 
+        System.out.println("accesing details from native method :\n");
         m.accessDetails();
 
         //Question 5
 
+        System.out.println("calling native method which modifies details:\n");
         m.modifyDetails();
+
+        System.out.println("modified details :\n");
         m.accessDetails();
 
      }

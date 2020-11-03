@@ -11,6 +11,12 @@
 
 
 public class ThrowCatch {
+
+    //load library
+    static {  
+      System.loadLibrary("hello");
+    }
+
     private native void catchThrow() throws NullPointerException;
     private native void catchThrow1();
     private void callback() throws ArithmeticException {            //demo method to help show jni arithmetic exception handling
@@ -25,7 +31,5 @@ public class ThrowCatch {
         }
         c.catchThrow1();
       }
-      static {
-        System.loadLibrary("throwcatch");
-      }
+     
 }
